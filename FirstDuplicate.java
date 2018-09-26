@@ -11,10 +11,10 @@ class FirstDuplicate
 		int[] a = {2, 1, 3, 5, 3, 2},
 				b = {2, 4, 3, 5, 1};
 		
-		System.out.printf ("%d\n%d\n",duplicate(a),duplicate(b));
+		System.out.printf ("%d\n%d\n",firstDuplicate(a),firstDuplicate(b));
 	}
 	
-	private static int duplicate (int []input)
+	private static int firstDuplicate (int []input)
 	{
 		TreeSet<Integer> s = new TreeSet<Integer>();
 		
