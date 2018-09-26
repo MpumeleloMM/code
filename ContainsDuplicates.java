@@ -11,10 +11,10 @@ class ContainsDuplicates
 		int[] a = {1, 2, 3, 1},
 				b = {3, 1};
 		
-		System.out.printf ("%s\n%s\n",duplicate(a),duplicate(b));
+		System.out.printf ("%s\n%s\n",containsDuplicates(a),containsDuplicates(b));
 	}
 	
-	private static boolean duplicate (int []input)
+	private static boolean containsDuplicates (int []input)
 	{
 		TreeSet<Integer> s = new TreeSet<Integer>();
 		
