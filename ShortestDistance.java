@@ -26,30 +26,36 @@ class ShortestDistance
 			{
 				if (x > y)
 				{
-					while ((x > 1) && (x != y))
+					while (x != y)
 					{
-						x /= 2;
-						xCount++;
-					}
-					
-					while ((y > 1) && (y != x))
-					{
-						y /= 2;
-						yCount++;
+						if (x > 1)
+						{
+							x /= 2;
+							xCount++;
+						}
+						
+						if (y > 1)
+						{
+							y /= 2;
+							yCount++;
+						}
 					}
 				}
 				else
 				{
-					while ((y > 1) && (y != x))
+					while (y != x)
 					{
-						y /= 2;
-						yCount++;
-					}
-					
-					while ((x > 1) && (x != y))
-					{
-						x /= 2;
-						xCount++;
+						if (y > 1)
+						{
+							y /= 2;
+							yCount++;
+						}
+						
+						if (x > 1)
+						{
+							x /= 2;
+							xCount++;
+						}
 					}
 				}
 			}
