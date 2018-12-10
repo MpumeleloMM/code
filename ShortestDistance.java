@@ -8,36 +8,53 @@ class ShortestDistance
 {
 	public static void main (String[] args)
 	{
-		int T;
+		int T, x, y, xCount, yCount;
 		Scanner input = new Scanner (System.in);
 		
 		// Read T value
 		T = input.nextInt();
 		input.nextLine();
 		
-		int[] node = new int[2],		// Input nodes
-				nodeCount = new int[2];	// Edge count
-		
 		for (int i=0; i<T; i++)
 		{
-			nodeCount[0] = nodeCount[1] = 0;
-			node[0] = input.nextInt();	// x
-			node[1] = input.nextInt();	// y
+			xCount = yCount = 0;
+			x = input.nextInt();
+			y = input.nextInt();
 			input.nextLine();
 			
-			while (node[0] != node[1])
-			{				
-				for (int j=0; j<2; j++)
+			if (x != y)
+			{
+				if (x > y)
 				{
-					if (node[j] != 1)
+					while ((x > 1) && (x != y))
 					{
-						node[j] /= 2;
-						nodeCount[j]++;
+						x /= 2;
+						xCount++;
+					}
+					
+					while ((y > 1) && (y != x))
+					{
+						y /= 2;
+						yCount++;
+					}
+				}
+				else
+				{
+					while ((y > 1) && (y != x))
+					{
+						y /= 2;
+						yCount++;
+					}
+					
+					while ((x > 1) && (x != y))
+					{
+						x /= 2;
+						xCount++;
 					}
 				}
 			}
 			
-			System.out.printf ("%d\n",nodeCount[0]+nodeCount[1]);
+			System.out.printf ("%d\n",xCount+yCount);
 		}
 	}
 }
