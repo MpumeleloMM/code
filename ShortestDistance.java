@@ -34,7 +34,7 @@ class ShortestDistance
 							xCount++;
 						}
 						
-						if (y > 1)
+						if ((y != x) && (y > 1))
 						{
 							y /= 2;
 							yCount++;
@@ -51,7 +51,8 @@ class ShortestDistance
 							yCount++;
 						}
 						
-						if (x > 1)
+						
+						if ((x != y) && (x > 1))
 						{
 							x /= 2;
 							xCount++;
