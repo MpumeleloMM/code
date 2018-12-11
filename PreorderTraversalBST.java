@@ -36,7 +36,7 @@ class PreorderTraversalBST
 			}
 			
 			// Preorder array from bst
-			Integer[] pre = bst.preorder(arr.length).toArray(new Integer[]{});
+			Integer[] pre = bst.preorder().toArray(new Integer[]{});
 			
 			// Print result
 			System.out.printf ("%d\n",(Arrays.equals(arr, pre))?1:0); 
@@ -51,12 +51,17 @@ class BinarySearchTree<T extends Comparable<? super T>>
 {
 	private Node root;
 	private ArrayList<T> items;
+	private int size;
 	
-	public BinarySearchTree (){}
+	public BinarySearchTree ()
+	{
+		size = 0;
+	}
 	
 	public void insert (T item)
 	{
 		root = insert (item, root);
+		size++;
 	}
 	
 	private Node insert (T item, Node n)
@@ -70,7 +75,7 @@ class BinarySearchTree<T extends Comparable<? super T>>
 		return n;
 	}
 	
-	public List<T> preorder (int size)
+	public List<T> preorder ()
 	{
 		items = new ArrayList<>(size);
 		preorder (root);
