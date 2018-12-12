@@ -10,7 +10,7 @@ class PrintK
 	{
 		Scanner input = new Scanner (System.in);
 		System.out.printf ("Input array: ");
-		String[] arr = input.nextLine().split(" ");
+		String[] arr = input.nextLine().split("[, ]+");
 		BinaryTree<String> bt = new BinaryTree<>();
 		
 		for (int i=0; i<arr.length; i++)
