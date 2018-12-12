@@ -8,13 +8,16 @@ class PrintK
 {
 	public static void main (String[] args)
 	{
-		int[] arr = {1,2,3,4,5,8};
-		BinaryTree<Integer> bt = new BinaryTree<>();
+		Scanner input = new Scanner (System.in);
+		System.out.printf ("Input array: ");
+		String[] arr = input.nextLine().split(" ");
+		BinaryTree<String> bt = new BinaryTree<>();
 		
 		for (int i=0; i<arr.length; i++)
 			bt.insert(arr[i]);
 		
-		int k = Integer.parseInt (new Scanner (System.in).nextLine());
+		System.out.printf ("k: ");
+		int k = Integer.parseInt (input.nextLine());
 		bt.printk(k);
 	}
 }
