@@ -79,12 +79,13 @@ class BinaryTree<T extends Comparable<? super T>>
 		}
 	}
 	
-	// BST Node class
+	// BT Node class
 	private class Node
 	{
 		private T data;
 		private Node left, right;
 		
+		// Default constructor
 		public Node ()
 		{
 			this (null);
